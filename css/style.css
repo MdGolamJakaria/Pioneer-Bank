@@ -1,0 +1,43 @@
+body{
+    padding: 100px 0px;
+}
+.bankHeader h2{
+    text-transform: capitalize;
+}
+.loginInputArea{
+    margin-top: 10%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(110, 110, 110);
+}
+.loginInputArea h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+.loginInputArea button{
+    text-transform: uppercase;
+}
+.accountArea{
+    display: none;
+}
+.deposit{
+    background-color: blueviolet;
+}
+.withdraw{
+    background-color: orchid;
+}
+.balance{
+    background-color: orange;
+}
+.status{
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+.input-Area{
+    box-shadow: 0px 0px 5px gray;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-top: 50px ;
+}
