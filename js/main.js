@@ -44,14 +44,20 @@ const logInBtn = document.getElementById("login");
 
         // emptyText = emptyInputBox("withdraw-amount");
         const withdrawNumber = getInputNumber("withdraw-amount");
+ 
         if(withdrawNumber<=0){
+
             alert("Please enter valid amount")
+
         }else{
-            const withdrawNumber = getInputNumber("withdraw-amount");
-
-            UpdateSpanText("current-withdraw", withdrawNumber) 
-            UpdateSpanText("current-balance", -1 * withdrawNumber);
-
+            const withdrawNumber =  getInputNumber("withdraw-amount")
+            const totalBalance = document.getElementById("current-balance").innerText *1;
+                if( withdrawNumber> totalBalance){
+                    alert("You have not enough balance")
+                }else{
+                    UpdateSpanText("current-withdraw", withdrawNumber);
+                    UpdateSpanText("current-balance", -1 * withdrawNumber);
+                }
             emptyText = emptyInputBox("withdraw-amount");
         }
     
@@ -67,7 +73,7 @@ const logInBtn = document.getElementById("login");
     function getInputNumber(id){
         const amount = document.getElementById(id).value;
         const Number = parseFloat(amount);
-        return Number;
+        return Number || 0;
     }
 
 
