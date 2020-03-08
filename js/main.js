@@ -12,6 +12,7 @@ const logInBtn = document.getElementById("login");
 // Start deposit button event handler
     const addDeposit = document.getElementById("deposit-Btn");
     addDeposit.addEventListener("click",function(){
+        
         const depositNumber = getInputNumber("deposit-amount")
 
         UpdateSpanText("current-deposit", depositNumber );
