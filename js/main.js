@@ -22,9 +22,9 @@ logInBtn.addEventListener("click", function(){
 
 // Start withdraw button event handler
     const withdrawBtn = document.getElementById("withdraw-Btn");
-        const withdrawBtn.addEventListener("click",function(){
+        withdrawBtn.addEventListener("click",function(){
         const withdrawAmount = document.getElementById("withdraw-amount").value;
-        const withrawNumber = parseFloat(withdrawAmount);
+        const withdrawNumber = parseFloat(withdrawAmount);
         
         const currentWithdraw = document.getElementById("current-withdraw").innerText;
 
