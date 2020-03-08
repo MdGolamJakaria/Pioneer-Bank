@@ -13,23 +13,48 @@ const logInBtn = document.getElementById("login");
     const addDeposit = document.getElementById("deposit-Btn");
     addDeposit.addEventListener("click",function(){
         
+        // const depositNumber = getInputNumber("deposit-amount")
+
+        // UpdateSpanText("current-deposit", depositNumber );
+        // UpdateSpanText("current-balance", depositNumber );
+
+        // emptyText = emptyInputBox("deposit-amount");
         const depositNumber = getInputNumber("deposit-amount")
+        if(depositNumber<=0){
+            alert("Please enter valid amount");
+        }else{
+            const depositNumber = getInputNumber("deposit-amount")
 
-        UpdateSpanText("current-deposit", depositNumber );
-        UpdateSpanText("current-balance", depositNumber );
+            UpdateSpanText("current-deposit", depositNumber );
+            UpdateSpanText("current-balance", depositNumber );
 
-        emptyText = emptyInputBox("deposit-amount");
+            emptyText = emptyInputBox("deposit-amount");
+        }
 })
 
 // Start withdraw button event handler
     const withdrawBtn = document.getElementById("withdraw-Btn");
         withdrawBtn.addEventListener("click",function(){
+        
+        
+        // const withdrawNumber = getInputNumber("withdraw-amount");
+
+        // UpdateSpanText("current-withdraw", withdrawNumber) 
+        // UpdateSpanText("current-balance", -1 * withdrawNumber);
+
+        // emptyText = emptyInputBox("withdraw-amount");
         const withdrawNumber = getInputNumber("withdraw-amount");
+        if(withdrawNumber<=0){
+            alert("Please enter valid amount")
+        }else{
+            const withdrawNumber = getInputNumber("withdraw-amount");
 
-        UpdateSpanText("current-withdraw", withdrawNumber) 
-        UpdateSpanText("current-balance", -1 * withdrawNumber);
+            UpdateSpanText("current-withdraw", withdrawNumber) 
+            UpdateSpanText("current-balance", -1 * withdrawNumber);
 
-        emptyText = emptyInputBox("withdraw-amount");
+            emptyText = emptyInputBox("withdraw-amount");
+        }
+    
     })
 
 
